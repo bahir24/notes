@@ -1,0 +1,13 @@
+{
+  "text-color": "#757575",
+  "text-color-head": "#383838",
+  "economy-icon": "#5A4D99",
+  "health-icon": "#BFCC36",
+  "publick-icon": "#1A587A",
+  "btn-color": "#FFA500",
+  "links-color": "#009DF2",
+  "bp-desktop-hd": "1800px",
+  "bp-desktop": "1200px",
+  "bp-tablets": "768px",
+  "bp-phones": "480px"
+}
