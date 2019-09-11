@@ -1,0 +1,93 @@
+.note {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+  justify-content: space-between;
+  // align-items: flex-start;
+  padding: 20px 20px;
+  border-bottom: 1px solid #000;
+}
+
+.note__head {
+  font-size: 2em;
+  font-weight: 600;
+  // text-align: center;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  max-height: 3vh;
+  width: 100%;
+  // margin-bottom: 10px;
+}
+
+.note__row {
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+  height: 15vh;
+  // justify-content: flex-end;
+}
+
+
+.note__description {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+
+  &:last-child {
+    margin-left: auto;
+  }
+}
+
+.note__text {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 100%;
+  height: 20vh;
+  // margin-bottom: 10px;
+}
+
+.note__description-head,
+.note__text-head {
+  margin-bottom: 5px;
+}
+
+.note__description-input {
+  font-size: 1.5em;
+  padding: 1%;
+}
+
+.note__text-area {
+  width: 100%;
+  height: 15vh;
+  padding: 2%;
+  font-size: 1.5em;
+}
+
+.note__tasks {
+  display: block;
+  width: 50%;
+  // height: 10vh;
+}
+
+.note__task {
+  width: 100%;
+  border-bottom: 2px solid rgba(235, 177, 17, 0.5);
+}
+
+.note__submit {
+  display: block;
+  padding: 0;
+  height: 10vh;
+  width: 25%;
+  border-radius: 0.5em 0.5em;
+  font-size: 2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-left: auto;
+
+}

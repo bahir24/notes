@@ -28,4 +28,36 @@ html(lang="ru")
                   .preview__btn-text удалить
                   +icon('delete', 'preview__btn-icon')
           main.diary
-          
+            article.note
+              h2.note__head Заметка
+              .note__row
+                label.note__description
+                  h3.note__description-head Заголовок
+                  input.note__description-input
+                label.note__description
+                  h3.note__description-head Дата
+                  input.note__description-input
+              label.note__text
+                h3.note__text-head Текст заметки
+                textarea.note__text-area
+              .note__row
+                ul.note__tasks
+                  li.note__task
+                    label.task
+                      input(
+                        disabled
+                      ).task__input
+                      +icon('task', 'task__icon')
+                  li.note__task
+                    label.task
+                      input(
+                        disabled
+                      ).task__input
+                      +icon('task', 'task__icon')
+                  li.note__task
+                    label.task
+                      input(
+                        disabled
+                      ).task__input
+                      +icon('task', 'task__icon')
+                button.note__submit Сохранить
