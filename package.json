@@ -63,9 +63,12 @@
     "vue": "^2.6.7",
     "vue-router": "^3.0.2"
   },
-  "repository": "git@github.com:bahir24/notes.git",
-  "bugs": {
-    "url": "git@github.com:bahir24/fe-school-testing/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bahir24/notes.git"
   },
-  "homepage": "git@github.com:bahir24/fe-school-testing#readme"
+  "homepage": "http://git@github.com:bahir24/fe-school-testing#readme",
+  "bugs": {
+    "url": "https://github.com/bahir24/notes/issues"
+  }
 }
