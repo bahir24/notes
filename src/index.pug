@@ -6,7 +6,26 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title |Notes
+    title | Notes
   body
-    .wrapper
-      .maincontent        
+    .wrapper      
+      section.hero
+        .container
+          aside.aside
+            - for (var i = 0; i<=9; i++)
+              .preview
+                date.preview__date 25 сен вторник
+                a(
+                  href="#"
+                ).preview__btn
+                  p.preview__btn-text править
+                  +icon('edit', 'preview__btn-icon')
+                h3.preview__head Lorem ipsum
+                p.preview__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magnam sint tenetur rem ullam commodi quo. Er consequuntur quasi maxime neque inventore ea animi doloribus repellendus veritatis, a eos hic.
+                a(
+                  href="#"
+                ).preview__btn
+                  .preview__btn-text удалить
+                  +icon('delete', 'preview__btn-icon')
+          main.diary
+          
