@@ -1,5 +1,5 @@
 {
-  "name": "fe-school-testing",
+  "name": "notes",
   "version": "1.0.0",
   "description": "test-task",
   "main": "index.js",
@@ -44,7 +44,7 @@
     "terser-webpack-plugin": "^1.2.3",
     "vue-loader": "^15.6.4",
     "vue-template-compiler": "^2.6.7",
-    "webpack": "^4.36.1",
+    "webpack": "^4.39.3",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.0"
   },
@@ -63,7 +63,7 @@
     "vue": "^2.6.7",
     "vue-router": "^3.0.2"
   },
-  "repository": "git@github.com:bahir24/fe-school-testing.git",
+  "repository": "git@github.com:bahir24/notes.git",
   "bugs": {
     "url": "git@github.com:bahir24/fe-school-testing/issues"
   },
