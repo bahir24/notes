@@ -20,7 +20,7 @@ $noteField->age = 30;
 $noteField->city = "New York";
 
 $noteFieldJSON = json_encode($noteField);
-
+// dfgdfg
   // while($row = mysqli_fetch_assoc($queryGetNotes)){
   // $arGetNotes[] = $row[1];
   // }
