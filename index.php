@@ -1,36 +1,3 @@
-<?php
-  $month = date("m") - 1;
-  $rus_months = [
-    'дек',
-    'янв',
-    'февр',
-    'март',
-    'апр',
-    'май',
-    'июнь',
-    'июль',
-    'авг',
-    'сен',
-    'окт',
-    'ноя',
-    'дек'
-  ];
-  $day = date("w");
-  $rus_weekdays = [
-    'воскресенье',
-    'понедельник',
-    'вторник',
-    'среда',
-    'четверг',
-    'пятница',
-    'суббота',
-    'воскресенье'
-  ];
-  $current_weekday = $rus_weekdays[$day];
-  $current_month = $rus_months[$month+1];
-  $current_day = date("j");
-?>
-
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -46,39 +13,7 @@
   <div class="wrapper">
     <section class="hero">
       <div class="container">
-        <aside class="aside">
-        <?php
-        setlocale(LC_ALL, 'ru_RU.UTF-8');
-        require 'functions.php';
-
-        for ($previewItem = 1; $previewItem < GetBaseLendth() + 1; $previewItem++) {
-        $arCurrString = GetStringById($previewItem);
-        $currDate = strtotime($arCurrString[note_date]);        
-        $currDateDay = date("d", $currDate);
-        $currDateMon = $rus_months[date("m", $currDate)-0];
-        $currDateWday = $rus_weekdays[date("w", $currDate)];
-        if (!$arCurrString[note_deleted]) {
-        echo "
-          <div class=\"preview\">
-            <date class=\"preview__date\">$currDateDay $currDateMon $currDateWday</date>
-            <a class=\"preview__btn preview__btn-show\" href=\"#\">
-              <div class=\"preview__btn-text\">править</div>
-              <svg class=\"preview__btn-icon\" viewBox=\"0 0 528.899 528.899\" preserveAspectRatio=\"none\">
-                <use xlink:href=\"./sprite.svg#edit\"></use>
-              </svg>
-            </a>
-            <h3 class=\"preview__head\">$arCurrString[note_head]</h3>
-            <p class=\"preview__text\">$arCurrString[note_text]</p>
-            <a class=\"preview__btn preview__btn-del\" href=\"#\">
-              <div class=\"preview__btn-text\">удалить</div>
-              <svg class=\"preview__btn-icon\" viewBox=\"-40 0 427 427.001\" preserveAspectRatio=\"none\">
-                <use xlink:href=\"./sprite.svg#delete\"></use>
-              </svg>
-            </a>
-          </div>";
-        } else {}
-        }          
-          ?>
+        <aside class="aside">       
         </aside>
         <main class="diary">
           <article class="note">
@@ -186,9 +121,9 @@
     </section>
   </div>
   <script type="text/javascript" src="./main.2945bca2de8976305cc8.build.js"></script>
-  <script type="text/javascript" src="./note_send.js"></script>
-  <script type="text/javascript" src="./note_delete.js"></script>
+  <script type="text/javascript" src="./note_send.js"></script>  
   <script async type="text/javascript" src="./create_preview.js"></script>
+  <script defer type="text/javascript" src="./note_delete.js"></script>
 </body>
 
 </html>

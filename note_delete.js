@@ -8,5 +8,6 @@ for (let delButtonIndex = 0; delButtonIndex < delButtons.length; delButtonIndex+
   const xhr = new XMLHttpRequest();
   xhr.open('POST', 'note_delete.php', true);
   xhr.send(currIndex);
+  // CreatePreview()
 });
 }
