@@ -44,6 +44,7 @@ function EditNote() {
     xhrEdit.send(JSON.stringify(editedNote));
     xhrEdit.onreadystatechange = function () {
       if (xhrEdit.readyState === XMLHttpRequest.DONE && xhrEdit.status === 200) {
+        form.reset();
         previewItem.childNodes[5].textContent = editedNote.head;
         previewItem.childNodes[7].textContent = editedNote.text;
       };

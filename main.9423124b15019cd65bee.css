@@ -465,6 +465,36 @@ input:focus:-ms-input-placeholder {
   background: none;
   padding: 1vh
 }
+.task__input:disabled {
+  background: rgb(224, 224, 224);
+}
+
+.task__icon-visible {
+  position: relative;
+  height: 3vh;
+}
+
+.task__icon-checkbox {
+  display: none;
+}
+
+.task__icon-checked {
+  display: block;
+}
+
+.task__icon-not {
+  display: none;
+
+}
+
+.task__icon-checkbox:checked~.task__icon-checked {
+  display: none;
+}
+
+.task__icon-checkbox:checked~.task__icon-not {
+
+  display: block;
+}
 
 .task__icon {
   position: absolute;
