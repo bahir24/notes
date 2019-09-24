@@ -9,5 +9,6 @@ function CreatePreview() {
       asidePreview.insertAdjacentHTML('beforeend', previewItem);
     };
     DeleteButton();
+    EditNote();
   };
 };

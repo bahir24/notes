@@ -351,6 +351,12 @@ input:focus:-ms-input-placeholder {
   font-size: 1.5em
 }
 
+.error {
+  height: 20px;
+  font-size: 15px;
+  color: red;
+}
+
 .note__tasks {
   display: block;
   width: 50%
