@@ -465,6 +465,7 @@ input:focus:-ms-input-placeholder {
   background: none;
   padding: 1vh
 }
+
 .task__input:disabled {
   background: rgb(224, 224, 224);
 }
@@ -496,7 +497,9 @@ input:focus:-ms-input-placeholder {
   display: block;
 }
 
-.task__icon {
+.task__icon,
+.task__icon-defer,
+.task__icon-ready {
   position: absolute;
   right: 2%;
   width: 3vh;
@@ -505,6 +508,11 @@ input:focus:-ms-input-placeholder {
   border: 1px solid rgba(224, 140, 30, .5);
   fill: rgba(224, 140, 30, .5)
 }
+
+.task__icon-ready {
+  left: 2%;
+}
+
 
 .todo {
   height: 42vh;
