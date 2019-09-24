@@ -3,6 +3,7 @@ function EditNote() {
   const form = document.querySelector('.note__form');
   const sendButtonEdit = document.querySelector('.note__submit');
   var previewItem = null;
+  var currEditIndex = null;
   var currLoadfields = function LoadFields() {
     event.preventDefault();
     previewItem = this.parentNode;    
@@ -13,13 +14,13 @@ function EditNote() {
     let noteDate = previewItem.childNodes[1].textContent;
     let noteHead = previewItem.childNodes[5].textContent;
     let noteText = previewItem.childNodes[7].textContent;
-    currEditIndex = editButton.dataset.previewIndex;
+    currEditIndex = this.dataset.previewIndex;
     //выгружаем заметку в поля формы
     form.elements.note_date.value = noteDate;
     form.elements.note_head.value = noteHead;
-    form.elements.note_text.value = noteText;    
+    form.elements.note_text.value = noteText;
   };
-
+  
   for (let editButtonIndex = 0; editButtonIndex < editButtons.length; editButtonIndex++) {
     var editButton = editButtons[editButtonIndex];
     // console.log(editButtons.length);
@@ -28,6 +29,8 @@ function EditNote() {
   };
   var currSendUpdates = function SendUpdates() {
     event.preventDefault();
+    // console.log(currEditIndex);
+
     //создаем именованный массив с данными полей и порядковым номером
     var editedNote = {
       note_id: currEditIndex,
