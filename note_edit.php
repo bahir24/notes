@@ -15,7 +15,10 @@ if ( !$baseEditNote ) die("Error"); //если база не существуе�
   $findIdEditNote = $arIdEditNote[$arEditNote[note_id]];
   $headEditNote = $arEditNote[head];
   $textEditNote = $arEditNote[text];
-  $cmdEditNote = "UPDATE notes SET note_head = \"$headEditNote\", note_text = \"$textEditNote\" WHERE note_id = $findIdEditNote";
+  $task0EditNote = $arEditNote[task0];
+  $task1EditNote = $arEditNote[task1];
+  $task2EditNote = $arEditNote[task2];
+  $cmdEditNote = "UPDATE notes SET note_head = \"$headEditNote\", note_text = \"$textEditNote\", note_task0 = \"$task0EditNote\", note_task1 = \"$task1EditNote\", note_task2 = \"$task2EditNote\" WHERE note_id = \"$findIdEditNote\"";
   echo "var_dump($cmdEditNote)";
   $queryEditNote = mysqli_query($baseEditNote, $cmdEditNote);    
 mysqli_close($baseEditNote);

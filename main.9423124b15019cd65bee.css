@@ -367,6 +367,12 @@ input:focus:-ms-input-placeholder {
   border-bottom: 2px solid rgba(235, 177, 17, .5)
 }
 
+.preview__note-tasks {
+  visibility: hidden;
+  position: absolute;
+}
+
+
 .note__submit {
   display: block;
   padding: 0;

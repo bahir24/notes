@@ -94,9 +94,9 @@
 
 
 
-     <?php
-        setlocale(LC_ALL, 'ru_RU.UTF-8');
-        require 'functions.php';
+    
+        // setlocale(LC_ALL, 'ru_RU.UTF-8');
+        // require 'functions.php';
 
         // for ($previewItem = 1; $previewItem < GetBaseLendth() + 1; $previewItem++) {
         // $arCurrString = GetStringById($previewItem);
@@ -105,8 +105,8 @@
         // $currDateMon = $rus_months[date("m", $currDate)-0];
         // $currDateWday = $rus_weekdays[date("w", $currDate)];
         // if (!$arCurrString[note_deleted]) {
-        // echo "
-        //   <div class=\"preview\">
+        // echo 
+        <!-- //   <div class=\"preview\">
         //     <date class=\"preview__date\">$currDateDay $currDateMon $currDateWday</date>
         //     <a class=\"preview__btn preview__btn-show\" href=\"#\">
         //       <div class=\"preview__btn-text\">править</div>
@@ -124,5 +124,46 @@
         //     </a>
         //   </div>";
         // } else {}
-        // }          
-        //   ?>
+        // }           -->
+        //  
+
+
+
+        // var sendFuncNoteTask = function FuncNoteTask() {
+//   var taskDate = new Date();
+//   var arNoteTasksValue = [];
+//   if (noteEdit.checked !== 'no') {
+//     var idTaskForNote = noteEdit.checked;
+//     taskDate = 'edit';
+//     var taskForNoteId = 'edit';
+//   } else {
+//     idTaskForNote = 'curr';
+//     taskForNoteId = 'curr';
+//   };
+//   if (form.elements.note_date.value !== '') {
+//     taskDate = form.elements.note_date.value;
+//   };
+//   var fieldName = 0;
+//   for (var noteTasksFieldsIndex = 0; noteTasksFieldsIndex < noteTasksFields.length; noteTasksFieldsIndex++) {
+//     noteTasksField = noteTasksFields[noteTasksFieldsIndex];
+//     var taskContent = {};
+//     if (noteTasksField.value !== '') {
+//       arNoteTasksValue[fieldName] = taskContent;
+//       taskContent.id = taskForNoteId;
+//       taskContent.text = noteTasksField.value;
+//       taskContent.date = taskDate;
+//       taskContent.note_id = idTaskForNote;
+//       fieldName++;
+//     };
+//   };
+//   if (form.elements.note_head.value !== '' && form.elements.note_text.value !== '') {
+//   for (i = 0; i < arNoteTasksValue.length; i++) {
+//     const xhrNoteTask = new XMLHttpRequest();
+//     xhrNoteTask.responseType = 'json';
+//     xhrNoteTask.open('POST', 'note_task_add.php');
+//     xhrNoteTask.send(JSON.stringify(arNoteTasksValue[i]));
+//   };
+//   };
+// };
+
+// sendButton.addEventListener('click', sendFuncNoteTask);

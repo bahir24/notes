@@ -17,6 +17,10 @@ require 'rus_dates.php';
       $arGetNote[head] = $row[1];
       $arGetNote[date] = $row[2];
       $arGetNote[text] = $row[3];
+      $arGetNote[task0] = $row[5];
+      $arGetNote[task1] = $row[6];
+      $arGetNote[task2] = $row[7];
+
     $arGetNotes[$row[0]] = $arGetNote;
   }
        for ($previewItem = 0; $previewItem < count($arGetNotes); $previewItem++) {
@@ -42,6 +46,12 @@ require 'rus_dates.php';
                 <use xlink:href=\"./sprite.svg#delete\"></use>
               </svg>
             </a>
+            <div class=\"preview__note-tasks\">
+              <p class=\"preview__note-task0\">$arGetNote[task0]</p>
+              <p class=\"preview__note-task1\">$arGetNote[task1]</p>
+              <p class=\"preview__note-task2\">$arGetNote[task2]</p>
+            </div>
+
           </div>";    
   }
   mysqli_close($notesBase);
