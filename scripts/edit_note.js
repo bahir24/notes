@@ -1,3 +1,4 @@
+var checkbutt = {checked: 'no'};
 function EditNote() {
   const editButtons = document.querySelectorAll('.preview__btn-show');
   const form = document.querySelector('.note__form');
@@ -9,6 +10,7 @@ function EditNote() {
     previewItem = this.parentNode;    
     //удаляем листенер, который создавал новую заметку      
     sendButtonEdit.removeEventListener('click', sendFunc);
+    checkbutt.checked = 'yes';
     sendButtonEdit.addEventListener('click', currSendUpdates);
     //добавляем в переменную текущий элемент
     let noteDate = previewItem.childNodes[1].textContent;
@@ -23,13 +25,11 @@ function EditNote() {
   
   for (let editButtonIndex = 0; editButtonIndex < editButtons.length; editButtonIndex++) {
     var editButton = editButtons[editButtonIndex];
-    // console.log(editButtons.length);
     editButton.dataset.previewIndex = editButtonIndex;//добавляем порядковый номер для индексации
     editButton.addEventListener('click', currLoadfields);
   };
   var currSendUpdates = function SendUpdates() {
     event.preventDefault();
-    // console.log(currEditIndex);
 
     //создаем именованный массив с данными полей и порядковым номером
     var editedNote = {
