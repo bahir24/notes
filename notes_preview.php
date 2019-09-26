@@ -1,10 +1,11 @@
 <?php
 require 'functions.php';
 require 'rus_dates.php';
-
+require 'connection.php'; 
+  // echo var_dump($baseConfig);
   setlocale(LC_ALL, 'ru_RU.UTF-8');
   mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-  $notesBase = mysqli_connect('localhost', "admin", "Raggacore24", 'test'); //подключаемся к базе
+  $notesBase = mysqli_connect($host, $user, $password, $database); //подключаемся к базе
   if ( !$notesBase ) die("Error"); //если база не существует возвращаем ошибку
 
   $cmdGetNotes = "SELECT * FROM notes WHERE note_deleted = 0";

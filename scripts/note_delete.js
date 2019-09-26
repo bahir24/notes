@@ -8,7 +8,7 @@ function DeleteButton() {
       let previewItem = this.parentNode;
       const xhr = new XMLHttpRequest();
       xhr.open('POST', 'note_delete.php', true);
-      console.log(currIndex);
+      
       xhr.send(currIndex);
       xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {

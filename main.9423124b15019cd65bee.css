@@ -517,6 +517,7 @@ input:focus:-ms-input-placeholder {
 
 .task__icon-ready {
   left: 2%;
+  height: 3vh;
 }
 
 

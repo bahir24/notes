@@ -1,10 +1,11 @@
 <?php
 setlocale(LC_ALL, 'ru_RU.UTF-8');
+require 'functions.php';
+require 'connection.php'; 
 $json=file_get_contents('php://input'); //получаем json из формы
 $data=json_decode($json,true); //декодируем json в массив
-print_r($data);
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-$base = mysqli_connect('localhost', "admin", "Raggacore24", 'test'); //подключаемся к базе
+$base = mysqli_connect($host, $user, $password, $database); //подключаемся к базе
 if ( !$base ) die("Error"); //если база не существует возвращаем ошибку
 
 $max_id_command = "SELECT MAX(note_id) FROM notes";

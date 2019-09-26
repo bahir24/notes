@@ -19,14 +19,11 @@ function EditNote() {
     let noteDate = previewItem.childNodes[1].textContent;
     let noteHead = previewItem.childNodes[5].textContent;
     let noteText = previewItem.childNodes[7].textContent;
-    // let arNoteTasks = [];
-    // console.log(previewHideTasks);
+ 
     let NoteTask0 = previewItem.querySelector('.preview__note-task0').textContent;
     let NoteTask1 = previewItem.querySelector('.preview__note-task1').textContent;
     let NoteTask2 = previewItem.querySelector('.preview__note-task2').textContent;
-    console.log(NoteTask0);
-    console.log(NoteTask1);
-    console.log(NoteTask2);
+
     
     currEditIndex = this.dataset.previewIndex;
     noteEdit.checked = currEditIndex;
@@ -38,15 +35,6 @@ function EditNote() {
     noteTasksFields[1].value = NoteTask1;
     noteTasksFields[2].value = NoteTask2;
 
-    // console.log(editNoteTasksFields[0]);
-    // for (let noteTasksFieldsIndex = 0; noteTasksFieldsIndex < noteTasksFields.length; noteTasksFieldsIndex++) {
-    //   noteTasksField = noteTasksFields[noteTasksFieldsIndex];
-    //   console.log(noteTasksField);
-    //   console.log(noteTasksField.value);
-      
-    //   noteTasksField.value = arNoteTasks[noteTasksFieldsIndex];
-    //   // console.log(noteTaskFielValue);
-    // };
 
   };
   

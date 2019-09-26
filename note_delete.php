@@ -1,9 +1,11 @@
 <?php 
+require 'functions.php';
+require 'connection.php'; 
 $indexInput=file_get_contents('php://input');
 $indexInt = (int)$indexInput;
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-$noteBase = mysqli_connect('localhost', "admin", "Raggacore24", 'test'); //подключаемся к базе
+$noteBase = mysqli_connect($host, $user, $password, $database); //подключаемся к базе
 if ( !$noteBase ) die("Error"); //если база не существует возвращаем ошибку
   $cmdIdNote = "SELECT note_id FROM notes WHERE note_deleted = 0";
   $queryIdNote = mysqli_query($noteBase, $cmdIdNote);

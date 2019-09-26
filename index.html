@@ -88,60 +88,70 @@
           <article class="todo">
             <h2 class="todo__head">TO DO лист</h2>
             <div class="todo__columns">
-              <div class="todo__col-right">
+              <div class="todo__col-left">
                 <div class="shedule">
                   <h3 class="shedule-head">Текущие задачи</h3>
                   <ul class="shedule__tasks">
                     <li class="shedule__task">
                       <label class="task">
                         <input class="task__input" disabled>
-
-                        <svg class="task__icon-defer" viewBox="0 0 476.213 476.213" xml:space="preserve">
+                        <!-- <svg class="task__icon-defer" viewBox="0 0 476.213 476.213" xml:space="preserve">
                           <use xlink:href="./sprite.svg#defer"></use>
-                        </svg> 
-                        <svg class="task__icon-ready" viewBox="0 0 448.8 448.8" xml:space="preserve">
-                          <use xlink:href="./sprite.svg#checked"></use>
-                        </svg>
-
+                        </svg> -->
+                        <label class="task__icon-ready">
+                          <input class="task__icon-checkbox" type="checkbox">
+                          <svg class="task__icon-not" viewBox="0 0 448.8 448.8" xml:space="preserve">
+                            <use xlink:href="./sprite.svg#checked"></use>
+                          </svg>
+                        </label>
                       </label>
                     </li>
                     <li class="shedule__task">
                       <label class="task">
                         <input class="task__input" disabled>
-                        <svg class="task__icon-defer" viewBox="0 0 476.213 476.213" xml:space="preserve">
+                        <!-- <svg class="task__icon-defer" viewBox="0 0 476.213 476.213" xml:space="preserve">
                           <use xlink:href="./sprite.svg#defer"></use>
-                        </svg>
-                        <svg class="task__icon-ready" viewBox="0 0 448.8 448.8" xml:space="preserve">
-                          <use xlink:href="./sprite.svg#checked"></use>
-                        </svg>
+                        </svg> -->
+                        <label class="task__icon-ready">
+                          <input class="task__icon-checkbox" type="checkbox">
+                          <svg class="task__icon-not" viewBox="0 0 448.8 448.8" xml:space="preserve">
+                            <use xlink:href="./sprite.svg#checked"></use>
+                          </svg>
+                        </label>
                       </label>
                     </li>
                     <li class="shedule__task">
                       <label class="task">
                         <input class="task__input" disabled>
-                        <svg class="task__icon-defer" viewBox="0 0 476.213 476.213" xml:space="preserve">
+                        <!-- <svg class="task__icon-defer" viewBox="0 0 476.213 476.213" xml:space="preserve">
                           <use xlink:href="./sprite.svg#defer"></use>
-                        </svg>
-                        <svg class="task__icon-ready" viewBox="0 0 448.8 448.8" xml:space="preserve">
-                          <use xlink:href="./sprite.svg#checked"></use>
-                        </svg>
+                        </svg> -->
+                        <label class="task__icon-ready">
+                          <input class="task__icon-checkbox" type="checkbox">
+                          <svg class="task__icon-not" viewBox="0 0 448.8 448.8" xml:space="preserve">
+                            <use xlink:href="./sprite.svg#checked"></use>
+                          </svg>
+                        </label>
                       </label>
                     </li>
                     <li class="shedule__task">
                       <label class="task">
                         <input class="task__input" disabled>
-                        <svg class="task__icon-defer" viewBox="0 0 476.213 476.213" xml:space="preserve">
+                        <!-- <svg class="task__icon-defer" viewBox="0 0 476.213 476.213" xml:space="preserve">
                           <use xlink:href="./sprite.svg#defer"></use>
-                        </svg>
-                        <svg class="task__icon-ready" viewBox="0 0 448.8 448.8" xml:space="preserve">
-                          <use xlink:href="./sprite.svg#checked"></use>
-                        </svg>
+                        </svg> -->
+                        <label class="task__icon-ready">
+                          <input class="task__icon-checkbox" type="checkbox">
+                          <svg class="task__icon-not" viewBox="0 0 448.8 448.8" xml:space="preserve">
+                            <use xlink:href="./sprite.svg#checked"></use>
+                          </svg>
+                        </label>
                       </label>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="todo__col-left">
+              <div class="todo__col-right">
                 <div class="shedule">
                   <h3 class="shedule-head">Новые задачи</h3>
                   <ul class="shedule__tasks">
@@ -213,6 +223,7 @@
   </div>
   <script type="text/javascript" src="./scripts/create_last_preview.js"></script>
   <script type="text/javascript" src="./scripts/note_send.js"></script>
+  <script type="text/javascript" src="./scripts/tasks_send.js"></script>
   <script type="text/javascript" src="./scripts/create_preview.js"></script>
   <script type="text/javascript" src="./scripts/note_delete.js"></script>
   <script type="text/javascript" src="./scripts/edit_note.js"></script>
