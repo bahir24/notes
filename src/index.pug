@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width", initial-scale="1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title | Notes
+  body
+    .wrapper
+      .maincontent        
+        .container
+          section.hero
+            aside.aside
+            main.diary
+              article.note
+                h2.note__head Заметка
+                form.note__form
+                  .note__row
+                    label.note__description
+                      h3.note__description-head Заголовок
+                      input.note__description-input(name='note_head', type='text', required='')
+                      .error
+                    label.note__description
+                      h3.note__description-head Дата
+                      input.note__description-input(name='note_date', type='text')
+                      .error
+                  .note__row
+                    label.note__text
+                      h3.note__text-head Текст заметки
+                      textarea.note__text-area(name='note_text', type='text', required='')
+                      .error
+                  .note__row
+                    - var i = 0
+                      ul.note__tasks
+                        while i < 3
+                          - i++
+                            li.note__task
+                              label.task
+                                input.task__input(disabled='')
+                                label.task__icon
+                                  input.task__icon-checkbox(type='checkbox')
+                                  svg.task__icon-checked(viewbox='0 0 512 512', preserveaspectratio='none')
+                                    use(xlink:href='./sprite.svg#task')
+                                  svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
+                                    use(xlink:href='./sprite.svg#checked')                       
+                    button.note__submit(form='note__form') Сохранить
+              article.todo
+                h2.todo__head TO DO
+                .todo__columns
+                  .todo__col-left
+                    .shedule
+                      h3.shedule-head Текущие задачи
+                      - var i = 0
+                        ul.shedule__tasks
+                          while i < 3
+                            - i++
+                              li.shedule__task
+                                label.task
+                                  input.task__input(disabled='')                            
+                                label.task__icon-ready
+                                  input.task__icon-checkbox(type='checkbox')
+                                  svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
+                                    use(xlink:href='./sprite.svg#checked')
+                        //- li.shedule__task
+                        //-   label.task
+                        //-     input.task__input(disabled='')
+                        //-     //
+                        //-       <svg class="task__icon-defer" viewBox="0 0 476.213 476.213" xml:space="preserve">
+                        //-       <use xlink:href="./sprite.svg#defer"></use>
+                        //-       </svg>
+                        //-     label.task__icon-ready
+                        //-       input.task__icon-checkbox(type='checkbox')
+                        //-       svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
+                        //-         use(xlink:href='./sprite.svg#checked')
+                        //- li.shedule__task
+                        //-   label.task
+                        //-     input.task__input(disabled='')
+                        //-     //
+                        //-       <svg class="task__icon-defer" viewBox="0 0 476.213 476.213" xml:space="preserve">
+                        //-       <use xlink:href="./sprite.svg#defer"></use>
+                        //-       </svg>
+                        //-     label.task__icon-ready
+                        //-       input.task__icon-checkbox(type='checkbox')
+                        //-       svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
+                        //-         use(xlink:href='./sprite.svg#checked')
+                        //- li.shedule__task
+                        //-   label.task
+                        //-     input.task__input(disabled='')
+                            
+                        //-       <svg class="task__icon-defer" viewBox="0 0 476.213 476.213" xml:space="preserve">
+                        //-       <use xlink:href="./sprite.svg#defer"></use>
+                        //-       </svg>
+                        //-     label.task__icon-ready
+                        //-       input.task__icon-checkbox(type='checkbox')
+                        //-       svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
+                        //-         use(xlink:href='./sprite.svg#checked')
+                  .todo__col-right
+                    .shedule
+                      h3.shedule-head Новые задачи
+                      ul.shedule__tasks
+                        li.shedule__task
+                          label.task
+                            input.task__input(disabled='')
+                            label.task__icon
+                              input.task__icon-checkbox(type='checkbox')
+                              svg.task__icon-checked(viewbox='0 0 512 512', preserveaspectratio='none')
+                                use(xlink:href='./sprite.svg#task')
+                              svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
+                                use(xlink:href='./sprite.svg#checked')
+                        li.shedule__task
+                          label.task
+                            input.task__input(disabled='')
+                            label.task__icon
+                              input.task__icon-checkbox(type='checkbox')
+                              svg.task__icon-checked(viewbox='0 0 512 512', preserveaspectratio='none')
+                                use(xlink:href='./sprite.svg#task')
+                              svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
+                                use(xlink:href='./sprite.svg#checked')
+                        li.shedule__task
+                          label.task
+                            input.task__input(disabled='')
+                            label.task__icon
+                              input.task__icon-checkbox(type='checkbox')
+                              svg.task__icon-checked(viewbox='0 0 512 512', preserveaspectratio='none')
+                                use(xlink:href='./sprite.svg#task')
+                              svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
+                                use(xlink:href='./sprite.svg#checked')
+                        li.shedule__task
+                          label.task
+                            input.task__input(disabled='')
+                            label.task__icon
+                              input.task__icon-checkbox(type='checkbox')
+                              svg.task__icon-checked(viewbox='0 0 512 512', preserveaspectratio='none')
+                                use(xlink:href='./sprite.svg#task')
+                              svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
+                                use(xlink:href='./sprite.svg#checked')
+                .todo__button
+                  button.todo__submit Отправить
+

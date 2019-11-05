@@ -1,0 +1,119 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $text-color;
+
+  @include desktop {
+    font-size: 14px;
+  }
+
+  @include tablets {
+    font-size: 12px;
+  }
+
+  @include phones {
+    font-size: 10px;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1480px;
+  width: 95%;
+
+  @include phones {
+    width: 100%;
+  }
+
+  &--header {
+    height: 100%;
+
+    @include desktop {
+      width: 100%;
+    }
+
+    @include tablets {
+      justify-content: space-between;
+
+    }
+  }
+
+  &--slider {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  &--nav {
+    max-width: 1000px;
+    width: auto;
+  }
+
+  &--footer {
+    height: 100%;
+  }
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button[type="button"] {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
