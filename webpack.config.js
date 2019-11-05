@@ -108,9 +108,9 @@ module.exports = (env, argv) => {
       noInfo: false,
       overlay: true
     },
-    performance: {
-      hints: false
-    },
+    // performance: {
+    //   hints: false
+    // },
     plugins: [
       new HtmlWebpackPlugin({
         template: "src/index.pug",
