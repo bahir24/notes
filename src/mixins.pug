@@ -1,0 +1,24 @@
+mixin icon(name, className)
+  - var icon = require(`images/icons/${name}.svg`);
+  svg(class=className viewBox=icon.viewBox preserveAspectRatio="none")
+    use(xlink:href=icon.url)
+
+mixin image(path, className)
+  img(src=require(`images/${path}`) class=className)
+
+mixin task(taskType)
+  li(class='note__task')
+    label(class='task')
+      input(class='task__input', disabled='')
+      label(class='task__icon')
+        input(class='task__icon-checkbox', type='checkbox')
+        if taskType === "new"
+          svg(class='task__icon-checked', viewbox='0 0 500 500')
+            use(xlink:href="./sprite.svg#checked")
+          svg(class='task__icon-not', viewbox='0 0 500 500')
+            use(xlink:href='./sprite.svg#task')
+        else 
+          svg(class='task__icon-checked', viewbox='0 0 500 500')
+            use(xlink:href="./sprite.svg#checked")
+          svg(class='task__icon-not', viewbox='0 0 500 500')
+            use(xlink:href='./sprite.svg#defer')

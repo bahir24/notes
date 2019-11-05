@@ -1,3 +1,5 @@
+include ./mixins.pug
+
 <!DOCTYPE html>
 html(lang="en")
   head
@@ -34,15 +36,7 @@ html(lang="en")
                       ul.note__tasks
                         while i < 3
                           - i++
-                            li.note__task
-                              label.task
-                                input.task__input(disabled='')
-                                label.task__icon
-                                  input.task__icon-checkbox(type='checkbox')
-                                  svg.task__icon-checked(viewbox='0 0 512 512', preserveaspectratio='none')
-                                    use(xlink:href='./sprite.svg#task')
-                                  svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
-                                    use(xlink:href='./sprite.svg#checked')                       
+                            +task('new')
                     button.note__submit(form='note__form') Сохранить
               article.todo
                 h2.todo__head TO DO
@@ -52,88 +46,17 @@ html(lang="en")
                       h3.shedule-head Текущие задачи
                       - var i = 0
                         ul.shedule__tasks
-                          while i < 3
+                          while i < 4
                             - i++
-                              li.shedule__task
-                                label.task
-                                  input.task__input(disabled='')                            
-                                label.task__icon-ready
-                                  input.task__icon-checkbox(type='checkbox')
-                                  svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
-                                    use(xlink:href='./sprite.svg#checked')
-                        //- li.shedule__task
-                        //-   label.task
-                        //-     input.task__input(disabled='')
-                        //-     //
-                        //-       <svg class="task__icon-defer" viewBox="0 0 476.213 476.213" xml:space="preserve">
-                        //-       <use xlink:href="./sprite.svg#defer"></use>
-                        //-       </svg>
-                        //-     label.task__icon-ready
-                        //-       input.task__icon-checkbox(type='checkbox')
-                        //-       svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
-                        //-         use(xlink:href='./sprite.svg#checked')
-                        //- li.shedule__task
-                        //-   label.task
-                        //-     input.task__input(disabled='')
-                        //-     //
-                        //-       <svg class="task__icon-defer" viewBox="0 0 476.213 476.213" xml:space="preserve">
-                        //-       <use xlink:href="./sprite.svg#defer"></use>
-                        //-       </svg>
-                        //-     label.task__icon-ready
-                        //-       input.task__icon-checkbox(type='checkbox')
-                        //-       svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
-                        //-         use(xlink:href='./sprite.svg#checked')
-                        //- li.shedule__task
-                        //-   label.task
-                        //-     input.task__input(disabled='')
-                            
-                        //-       <svg class="task__icon-defer" viewBox="0 0 476.213 476.213" xml:space="preserve">
-                        //-       <use xlink:href="./sprite.svg#defer"></use>
-                        //-       </svg>
-                        //-     label.task__icon-ready
-                        //-       input.task__icon-checkbox(type='checkbox')
-                        //-       svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
-                        //-         use(xlink:href='./sprite.svg#checked')
+                              +task('old')
                   .todo__col-right
                     .shedule
                       h3.shedule-head Новые задачи
-                      ul.shedule__tasks
-                        li.shedule__task
-                          label.task
-                            input.task__input(disabled='')
-                            label.task__icon
-                              input.task__icon-checkbox(type='checkbox')
-                              svg.task__icon-checked(viewbox='0 0 512 512', preserveaspectratio='none')
-                                use(xlink:href='./sprite.svg#task')
-                              svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
-                                use(xlink:href='./sprite.svg#checked')
-                        li.shedule__task
-                          label.task
-                            input.task__input(disabled='')
-                            label.task__icon
-                              input.task__icon-checkbox(type='checkbox')
-                              svg.task__icon-checked(viewbox='0 0 512 512', preserveaspectratio='none')
-                                use(xlink:href='./sprite.svg#task')
-                              svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
-                                use(xlink:href='./sprite.svg#checked')
-                        li.shedule__task
-                          label.task
-                            input.task__input(disabled='')
-                            label.task__icon
-                              input.task__icon-checkbox(type='checkbox')
-                              svg.task__icon-checked(viewbox='0 0 512 512', preserveaspectratio='none')
-                                use(xlink:href='./sprite.svg#task')
-                              svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
-                                use(xlink:href='./sprite.svg#checked')
-                        li.shedule__task
-                          label.task
-                            input.task__input(disabled='')
-                            label.task__icon
-                              input.task__icon-checkbox(type='checkbox')
-                              svg.task__icon-checked(viewbox='0 0 512 512', preserveaspectratio='none')
-                                use(xlink:href='./sprite.svg#task')
-                              svg.task__icon-not(viewbox='0 0 448.8 448.8', xml:space='preserve')
-                                use(xlink:href='./sprite.svg#checked')
-                .todo__button
+                      - var i = 0
+                        ul.shedule__tasks
+                          while i < 4
+                            - i++
+                              +task('new')
+                .todo__button                  
                   button.todo__submit Отправить
 
